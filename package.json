@@ -1,0 +1,35 @@
+{
+  "name": "wallpaper-changer",
+  "version": "1.0.0",
+  "description": "Random wallpaper changing app",
+  "main": "index.js",
+  "scripts": {
+    "electron": "electron .",
+    "dist:linux": "electron-builder --linux",
+    "dist:windows": "electron-builder --win"
+  },
+  "author": "Akos Herko <herkoak@gmail.com>",
+  "homepage": "https://herkoakos.com",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^6.0.10",
+    "electron-builder": "^21.2.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "wallpaper": "^4.4.1"
+  },
+  "build": {
+    "appId": "com.herko.wallpaper-changer",
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Utility"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "asar": false
+  }
+}
